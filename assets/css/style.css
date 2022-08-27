@@ -1,0 +1,487 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #ffb727;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffc85a;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  z-index: 997;
+  transition: all 0.5s;
+  height: 80px;
+  background: rgba(25, 28, 31, 0.8);
+}
+
+#header.header-transparent {
+  background: transparent;
+}
+
+#header.header-scrolled {
+  height: 60px;
+  background: rgba(25, 28, 31, 0.8);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+.navbar {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(12, 95, 16, 0.579);
+  width: 100%;
+  margin-top: -36px;
+  height: 90%;
+  background-size: cover;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-left: 16%;
+  margin-top: 1%;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #ffb727;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 400;
+  color: #3b434a;
+  letter-spacing: 1px;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #ffb727;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/assets/img/1.jpg") top right;
+  background-size: 22%;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: relative ;
+  z-index: 1;
+    width: 1500px;
+    height: 850px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-family: "Satisfy", serif;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#hero .btn-scroll {
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.6);
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+#hero .btn-scroll i {
+  font-size: 48px;
+}
+
+#hero .btn-scroll:hover {
+  color: #ffb727;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero h1 {
+    font-size: 40px;
+  }
+
+  #hero h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+.bx {
+  font-family: boxicons!important;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.alert {
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  width: 600px;
+  height: 645px;
+  
+  background-image: url(/assets/img/zo.png);
+  color:black;
+  text-align:  center;
+  font-size: 25px;
+  font-style: oblique;
+  opacity: 1;
+  transition: opacity 0.6s;
+  z-index: 1;
+  
+  
+}
+
+
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+
+/**about**/
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: -0%;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #25a511b0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title span {
+  position: absolute;
+    top: 30px;
+    color: #eb22e566;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 52px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+.row p{
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+
+.row {
+  display: flex ;
+  justify-items: flex-start;
+
+  
+}
+.row img{
+  padding: 20px;
+  width: 450px;
+  float: left;
+}
+/**colors**/
+.carousel-item{
+  width: 35%;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+.carousel{
+  background-color: #33161679;
+}
+.w-200{
+  background-color: #33161679;
+  height: 750px;
+  width: 1012px;
+  margin-left: -17%;  
+}
+/**women**/
+.women video {
+  width: 100%;
+}
+/**trouvez votre style **/
+.vid1{
+  width:100%;
+  height: 750px;
+  margin-top: 5%;
+}
+/**morphologies**/
+.shape{
+  width:100%;
+  height: 750px;
+}
+/**inspiration**/
+.card1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5%;
+  
+}
+
+.like{
+  margin-left: 40%;
+}
+.inspi{
+    font-size: 70px;
+  text-shadow: 2px 2px;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: green;
+    margin-top: 5%;
+    margin-left: 43%;
+    margin-right: 32%;
+    border: 4px solid palevioletred ;
+    
+}
+/**hommes**/
+.men video {
+  width: 100%;
+}
+/**men inspiration**/
+#im{
+  width: 100%;
+  margin-left: -0%;
+}
+/**morphologies**/
+.shapes1  {
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  text-shadow: 2px 2px;
+  margin-left: 25%;
+  margin-right: 20%;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:paleturquoise;
+    background-color: #3b434a5c;
+    margin-top: 5%;
+  
+}
+.back{
+  background-image: url(/assets/img/pexels-cottonbro-6491960.jpg);
+  background-size: 25%;
+  height: 700px;
+}
+.youtube{
+  border: 10px solid rgba(175, 238, 238, 0.851);
+  height: 400px;
+  margin-left: 27%;
+  margin-top: 5%;
+
+}
+/**lunettes**/
+.card2{
+  margin-left: 1%;
+  padding: 5%;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.face{
+  justify-content: center;
+  margin-left: 18%;
+  margin-top: 5%;
+  text-shadow: 2px 2px;
+  color: orangered;
+
+}
+/**contact**/
+.form{
+  padding: 6%;
+  margin-top: 10%;
+  margin-left: 35%;
+  margin-right: 28%;
+  width: 650px;
+
+}
+#form1{
+  background-image: url(/assets/img/Z.M\ \(5\).png);
+  background-size: 55%;
+}
+.btn{
+  font-size: 1rem;}
+  /**instagram**/
+  
+
+.ft14 {
+font-size: 50px !important;
+  color:red;
+}
+.bg{
+  margin-left: 47%;
+  margin-top: -4%;
+}
+.mail{
+  margin-left: 39%;
+  background-color: whitesmoke;
+  margin-right: 40%;
+}
